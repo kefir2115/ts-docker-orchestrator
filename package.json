@@ -1,0 +1,33 @@
+{
+  "name": "ts-docker-orchestrator",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "typecheck": "tsc -p tsconfig.test.json",
+    "test": "node --import tsx --test src-test/*.test.ts",
+    "coverage": "node --import tsx --test --experimental-test-coverage src-test/*.test.ts",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/dockerode": "^4.0.1",
+    "@types/node": "^26.5.0",
+    "eslint": "^10.10.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.6",
+    "tsx": "^4.23.13",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.70.0"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.1",
+    "dockerode": "^5.0.1",
+    "hono": "^4.13.7"
+  }
+}
